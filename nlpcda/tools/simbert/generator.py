@@ -21,7 +21,7 @@ class SynonymsGenerator(AutoRegressiveDecoder):
     """seq2seq解码器
     """
 
-    def __init__(self, model_path, max_len=32, seed=1):
+    def __init__(self, model_path, max_len=200, seed=1):#这里原来是32,被我改成128了
         # super().__init__()
         setup_seed(seed)
         self.config_path = os.path.join(model_path, "bert_config.json")
@@ -53,7 +53,7 @@ class SynonymsGenerator(AutoRegressiveDecoder):
 
     def generate(self, text, n=1, topk=5):
         token_ids, segment_ids = self.tokenizer.encode(
-            text, max_length=self.max_len)
+            text, max_length=self.max_len)#max_len用来做句子截断的最大值设定
         output_ids = self.random_sample([token_ids, segment_ids], n, topk)
         return [self.tokenizer.decode(ids) for ids in output_ids]
 

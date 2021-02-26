@@ -1,0 +1,12 @@
+nlpcda/tools/__pycache__/*.pyc
+
+nlpcda/tools/simbert/__pycache__/*.pyc
+
+nlpcda/__pycache__/*.pyc
+*.txt
+model/chinese_simbert_L-12_H-768_A-12/bert_config.json
+model/chinese_simbert_L-12_H-768_A-12/bert_model.ckpt.data-00000-of-00001
+model/chinese_simbert_L-12_H-768_A-12/bert_model.ckpt.index
+model/chinese_simbert_L-12_H-768_A-12/checkpoint
+nlpcda/__init__.pyc
+nlpcda/tools/__init__.pyc
